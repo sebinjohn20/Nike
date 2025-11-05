@@ -1,0 +1,20 @@
+@font-face{
+    font-family: 'HelveticaNowDisplayMedium';
+    src: url(HelveticaNowDisplayMedium.woff2);
+}
+@font-face {
+    font-family: 'HelveticaNowText';
+    src: url(HelveticaNowText.woff2);
+}
+@font-face {
+    font-family: 'HelveticaNowTextMedium';
+    src: url(HelveticaNowTextMedium.woff2);
+}
+@font-face {
+    font-family: 'Nike-Futura-ot-300';
+    src: url(Nike-Futura-ot-300.woff2);
+}
+@font-face {
+    font-family: 'Nike-Futura';
+    src: url(Nike-Futura.woff2);
+}

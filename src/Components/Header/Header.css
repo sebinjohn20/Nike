@@ -1,0 +1,85 @@
+.header-container{
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    align-items: center;
+    padding: 0 24px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+.logo-container{
+    display: inline-flex;
+    height: 60px;
+    grid-column: span 5;
+    margin: 0;
+    padding: 0;
+}
+.logo-container .logo-img{
+   display: inline-block;
+   height: 59px;
+   width: 59px;
+   margin: 1px 0;
+   cursor: pointer;
+}
+.logo-container .swoosh-svg{
+    transform: scale(1.33);
+    height: 100%;
+    width: 100%;
+}
+.shopping-menu-grid{
+    height: 60px;
+    grid-column: span 1;
+}
+.header-right-side-container{
+    grid-column:  span 6;
+
+}
+.header-right-side-body{
+    display: flex;
+    float: right;
+    gap: 4px;
+
+}
+.header-right-side-body .search-bar{
+    grid-template-columns:  0 36px 0;
+    transition: none;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+
+}
+.search-bar-input{
+    grid-column: 2;
+}
+.search-input-container{
+
+    display: flex;
+    
+
+}
+.search-input-container button{
+    background-color: #fff;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative ;
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+
+}
+.profile-btn,.menu-btn{
+    background: #fff;
+    color:#111111;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+}
