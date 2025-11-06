@@ -149,6 +149,7 @@ footer{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    border-top: 1px solid transparent;
 
 }
 .footer-copy-right{

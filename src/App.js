@@ -5,6 +5,7 @@ import Banner from './Components/Banner/Banner';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import ProductList from './Components/ProductList/ProductList';
+import ProductDetail from './Components/ProductDetail/ProductDetail';
 
 function App() {
   return (
@@ -23,10 +24,21 @@ function App() {
             <>
           <Header></Header>
           <ProductList></ProductList>
+          <Footer></Footer>
           </>
           
+
             
             } />
+             <Route path='/product/:id'element={
+              <>
+              <Header></Header>
+              <ProductDetail></ProductDetail>
+              </>
+              
+              }>
+
+              </Route>
     </Routes>
     </BrowserRouter>
   );
