@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ProductList.css'
 import { useNavigate } from 'react-router-dom'
+import Filter from '../Filter/Filter'
 
 function ProductList() {
  const navigate=useNavigate()
@@ -101,8 +102,10 @@ function ProductList() {
               </div>
             </div>
             ))}
+           
             
           </div>
+          <Filter></Filter>
        
     </div>
    

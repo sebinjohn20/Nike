@@ -34,6 +34,7 @@ function App() {
               <>
               <Header></Header>
               <ProductDetail></ProductDetail>
+              <Footer></Footer>
               </>
               
               }>
