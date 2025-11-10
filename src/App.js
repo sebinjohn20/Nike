@@ -6,9 +6,11 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import ProductList from './Components/ProductList/ProductList';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
+import { FilterProvider } from './Components/Context/Context';
 
 function App() {
   return (
+    <FilterProvider>
     <BrowserRouter>
     <Routes>
       <Route
@@ -42,6 +44,7 @@ function App() {
               </Route>
     </Routes>
     </BrowserRouter>
+    </FilterProvider>
   );
 }
 
