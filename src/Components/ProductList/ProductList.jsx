@@ -2,17 +2,83 @@ import React, { useEffect, useState } from 'react'
 import './ProductList.css'
 import { useNavigate } from 'react-router-dom'
 import Filter from '../Filter/Filter'
-
+import {useFilter} from '../Context/Context'
 function ProductList() {
  const navigate=useNavigate()
   const [products,setProducts]=useState([])
+  const[filteredProducts,setFilteredProducts]=useState([])
+  const{selectedSort,selectedColor,selectedGender,selectedPrice,selectedSize}=useFilter()
   useEffect(()=>{
     fetch("/Products.json")
     .then((res)=>res.json())
     .then((data)=>{
       setProducts(data)
+      setFilteredProducts(data)
     })
-  })
+  },[])
+  useEffect(()=>{
+    const applySorting=(productsToSort,sortBy)=>{
+      const sortedProducts=[...productsToSort];
+      switch(sortBy){
+           
+         
+        case "Newest":
+          return sortedProducts.sort((a,b)=>b.id-a.id);
+        case "Price: High-Low":
+          return sortedProducts.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+        case "Price: Low-High":
+          return sortedProducts.sort((a,b)=>parsePrice(a.price)-parsePrice(b.price))
+     
+          default:
+        return sortedProducts;
+
+      }
+    }
+    let filtered= products
+    // Color filter
+    .filter(product=>
+      selectedColor.length ===0 || selectedColor.includes(product.color)
+      
+    )
+    // Gender Filter
+    .filter(product=>
+      selectedGender.length===0 || selectedGender.includes(product.gender)
+    )
+    // Price Filter
+    .filter(product =>
+  selectedPrice.length === 0 ||
+  selectedPrice.some(range => isPriceInRange(parsePrice(product.price), range))
+
+)
+  // Size Filter
+  .filter(product=>
+    selectedSize.length === 0 ||
+    product.size.some(size=>selectedSize.includes(size))
+  )
+
+    filtered=applySorting(filtered,selectedSort)
+    setFilteredProducts(filtered)
+  },[selectedSort,selectedColor,selectedGender,selectedPrice,selectedSize])
+
+
+
+const parsePrice = priceStr =>
+  parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+
+
+const isPriceInRange=(price,range)=>{
+  switch (range) {
+    case "Under ₹ 2 500.00": return price<=2500
+    case "₹ 2 501.00 - ₹ 7 500.00": return price>=2501 && price<=7500
+    case "₹ 7 501.00 - ₹ 12 999.00": return price>=7501 && price<=12999
+     case "Over ₹ 13 000.00": return price >= 13000;
+   
+  
+    default:
+      return true;
+  }
+}
+
   return (
     <>
     <div className='productlist-container'>
@@ -62,7 +128,7 @@ function ProductList() {
         </div>
     
           <div className="product-list-body">
-            {products.map((item,index)=>(
+            {filteredProducts.map((item,index)=>(
             <div className="product-card-container" key={index} onClick={()=>navigate(`/product/${item.id}`)}>
               <div className="product-card-body">
                <div className='product-brand-title'>
@@ -93,7 +159,7 @@ function ProductList() {
                     </div>
                     {item.offerPrice &&(
                     <div className="offer-price-text">
-                      MRP : {item.offerPrice}
+                      {item.offerPrice}
                     </div>
                     )}
                   </div>

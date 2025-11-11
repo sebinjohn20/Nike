@@ -16,6 +16,9 @@ export const FilterProvider = ({children}) => {
   const [selectedShoesHeight, setSelectedShoesHeight] = useState([]);
   const[selectedSurface,setSelectedSurface]=useState([])
   const[selectedBrand,setSelectedBrand]=useState([])
+  const[selectedWidth,setSelectedWidth]=useState([])
+  const[selectedTechnology,setSelectedTechnology]=useState([])
+  const[selectedSort, setSelectedSort]=useState("Featured")
 
 
 
@@ -100,6 +103,23 @@ export const FilterProvider = ({children}) => {
         : [...prev,brand]
     })
   }
+ const updateTechnologyFilter=(tech)=>{
+    setSelectedTechnology((prev)=>{
+      return prev.includes(tech)
+      ?prev.filter((t)=>t!==tech)
+      : [...prev,tech]
+    })
+  }
+  const updateWidthFilter=(width)=>{
+    setSelectedWidth((prev)=>{
+      return prev.includes(width)
+      ?prev.filter((w)=>w!==width)
+      :[...prev,width]
+    })
+  }
+  const updateSort=(sortOption)=>{
+      setSelectedSort(sortOption);
+    };
   const genderlist = ["Men", "Women", "Unisex"];
   const priceList=["Under ₹ 2 500.00","₹ 2 501.00 - ₹ 7 500.00","₹ 7 501.00 - ₹ 12 999.00","Over ₹ 13 000.00"]
  const offerList=["Sale"]
@@ -172,6 +192,34 @@ const brandList=[
     "NikeLab"
 
 ]
+const technologyList=[
+  "Nike FlyEase",
+  "Nike Flyknit",
+  "Nike Flymesh",
+  "Nike Flyweave",
+  
+
+
+]
+const moreTechnologyList=[
+  "Nike Flywire",
+  "GORE-TEX",
+  "Nike Lunarlon",
+  "Nike Max Air",
+  "Nike Air",
+  "Nike Free",
+  "Nike React",
+  "Nike Shox",
+  "NikeSkin",
+  "Nike Zoom Air",
+  "Nike ZoomX",
+
+]
+const widthList=[
+  "Regular",
+  "Wider",
+  "Extra Wider"
+]
   const value = {
     selectedGender,
     updateGenderFilter,
@@ -205,7 +253,16 @@ const brandList=[
     surfaceList,
     selectedBrand,
     updateBrandFilter,
-    brandList
+    brandList,
+    selectedTechnology,
+   updateTechnologyFilter,
+    technologyList,
+    moreTechnologyList,
+    widthList,
+    selectedWidth,
+    updateWidthFilter,
+    selectedSort,
+    updateSort
     
     
 

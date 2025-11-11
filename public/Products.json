@@ -1,58 +1,74 @@
 [
-    {
-        "id": 1,
-        "brandName": "Nike Air Force 1 '07 LV8",
-        "justIn": false,
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/654141ae-1e26-429d-b644-52b25052fc8c/AIR+FORCE+1+%2707+LV8.png",
-        "type": "Men's Shoes",
-        "price":"MRP : ₹ 10 795.00",
-        "offerPrice": null
-    },
-    {
-        "id": 2,
-        "brandName": "Nike SB PS8",
-        "justIn": false,
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f5da621b-7c02-4c28-8cda-5efedb6b1a50/NIKE+SB+PS8.png",
-        "type": "Men's Shoes",
-        "price": "MRP : ₹ 10 795.00",
-        "offerPrice": null
-    },
-    {
-        "id": 3,
-        "brandName": "Nike Gato LV8",
-        "justIn": false,
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f0c05bf3-780c-4547-93ea-b444109877ec/NIKE+GATO+LV8.png",
-        "type": "Men's Shoes",
-        "price": "MRP : ₹ 9 695.00",
-        "offerPrice": null
-    },
-    {
-        "id": 4,
-        "brandName": "Nike Vomero 18",
-        "justIn": "Recycled Materials",
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/597ae1d8-e4cc-4c27-8ae3-cce03b69b288/W+NIKE+VOMERO+18.png",
-        "type": "Women's Road Running Shoes",
-        "price": "MRP : ₹ 13 295.00",
-        "offerPrice": null
-    },
-     {
-        "id": 5,
-        "brandName": "Nike Gato",
-        "justIn": false,
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/deaad533-893d-4cf9-8a23-ea5de97c844c/NIKE+GATO.png",
-        "type": "Men's Shoes",
-        "price": "MRP : ₹ 9 695.00",
-        "offerPrice": null
-    },
-      {
-        "id": 6,
-        "brandName": "Nike Gato",
-        "justIn": "Just In",
-        "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/fd5068d2-a9fe-4075-9555-71ffff53e4b2/NIKE+GATO.png",
-        "type": "Men's Shoes",
-        "price": "₹ 9 210.00",
-        "offerPrice":"MRP : ₹ 9 695.00"
-    }
-  
-    
+  {
+    "id": 1,
+    "brandName": "Nike Air Force 1 '07 LV8",
+    "justIn": false,
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/654141ae-1e26-429d-b644-52b25052fc8c/AIR+FORCE+1+%2707+LV8.png",
+    "type": "Men's Shoes",
+    "price": "MRP : ₹ 10 795.00",
+    "offerPrice": null,
+    "color": "Brown",
+    "gender": "Men",
+    "size": ["7", "7.5", "8", "8.5", "9", "10", "11"]
+  },
+  {
+    "id": 2,
+    "brandName": "Nike SB PS8",
+    "justIn": false,
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f5da621b-7c02-4c28-8cda-5efedb6b1a50/NIKE+SB+PS8.png",
+    "type": "Men's Shoes",
+    "price": "MRP : ₹ 10 795.00",
+    "offerPrice": null,
+    "color": "Black",
+    "gender": "Women",
+    "size": ["5", "5.5", "6", "6.5", "7", "8", "9"]
+  },
+  {
+    "id": 3,
+    "brandName": "Nike Gato LV8",
+    "justIn": false,
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/f0c05bf3-780c-4547-93ea-b444109877ec/NIKE+GATO+LV8.png",
+    "type": "Men's Shoes",
+    "price": "MRP : ₹ 9 695.00",
+    "offerPrice": null,
+    "color": "White",
+    "gender": "Unisex",
+    "size": ["6", "6.5", "7", "7.5", "8"]
+  },
+  {
+    "id": 4,
+    "brandName": "Nike Vomero 18",
+    "justIn": "Recycled Materials",
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/597ae1d8-e4cc-4c27-8ae3-cce03b69b288/W+NIKE+VOMERO+18.png",
+    "type": "Women's Road Running Shoes",
+    "price": "MRP : ₹ 13 295.00",
+    "offerPrice": null,
+    "color": "Black",
+    "gender": "Men",
+    "size": ["8", "8.5", "9", "9.5", "10", "10.5"]
+  },
+  {
+    "id": 5,
+    "brandName": "Nike Gato",
+    "justIn": false,
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/deaad533-893d-4cf9-8a23-ea5de97c844c/NIKE+GATO.png",
+    "type": "Men's Shoes",
+    "price": "MRP : ₹ 9 695.00",
+    "offerPrice": null,
+    "color": "Brown",
+    "gender": "Unisex",
+    "size": ["7", "8", "9", "10"]
+  },
+  {
+    "id": 6,
+    "brandName": "Nike Gato",
+    "justIn": "Just In",
+    "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/fd5068d2-a9fe-4075-9555-71ffff53e4b2/NIKE+GATO.png",
+    "type": "Men's Shoes",
+    "price": "₹ 9 210.00",
+    "offerPrice": "MRP : ₹ 9 695.00",
+    "color": "Orange",
+    "gender": "Women",
+    "size": ["5", "6", "6.5", "7", "7.5"]
+  }
 ]

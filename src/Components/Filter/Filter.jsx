@@ -50,7 +50,16 @@ function Filter() {
         surfaceList,
         selectedBrand,
         updateBrandFilter,
-        brandList
+        brandList,
+        selectedTechnology,
+        updateTechnologyFilter,
+        technologyList,
+        moreTechnologyList,
+        widthList,
+       selectedWidth,
+      updateWidthFilter,
+       selectedSort,
+       updateSort
         
 
         }=useFilter();
@@ -87,8 +96,11 @@ function Filter() {
                                             </legend>
                                             <div className="sort-items-container-flex">
                                               {sort.map((item, index) => (
-                                                <div className="sort-items-container-flex-one" key={index}>
-                                                    <input type="radio" name="sort-option" /> 
+                                                <div className="sort-items-container-flex-one" key={index} onClick={()=>updateSort(item)}>
+                                                    <input type="radio" name="sort-option" 
+                                                     checked={selectedSort === item}
+                                                    
+                                                    /> 
                                                     <span className='radio-cirlce'></span>
                                                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px">
                                                     <g transform="translate(2,2)">
@@ -360,35 +372,7 @@ function Filter() {
 
                                         </div>
                                     </div>
-                                     <div className="filter-group-container">
-                                        <div className="filter-price-container">
-                                            <div className="filter-gender-heading-conatiner">
-                                                <div className="filter-gender-text">
-                                                   Sports&nbsp;
-                                                   {selectedSports.length!==0 &&(
-                                                    <div className="filter-group-count">
-                                                        ({selectedSports.length})
-                                                    </div>
-                                                   )}
-                                                </div>
-                                                
-                                            </div>
-                                            <div className="filter-gender-body-container">
-                                            {sportsList.map((item, index) => (
-                                                <div className="filter-gender-body-first" onClick={() => updateSportsFilter(item)} key={index}>
-                                                    <div className={`pesudo-checkbox ${selectedSports.includes(item) ? "is-checked" : ""}`}>
-                                                        {selectedSports.includes(item) && <div className="icon-checkmark"></div>}
-                                                    </div>
-                                                    <span className="filter-gender-body-text">
-                                                        {item}
-                                                    </span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-
-                                        </div>
-                                    </div>
+                                   
                                      <div className="filter-group-container">
                                         <div className="filter-price-container">
                                             <div className="filter-gender-heading-conatiner">
@@ -591,8 +575,123 @@ function Filter() {
 
                                         </div>
                                     </div>
+                                     <div className="filter-group-container">
+                                        <div className="filter-price-container">
+                                            <div className="filter-gender-heading-conatiner">
+                                                <div className="filter-gender-text">
+                                                   Technology&nbsp;
+                                                   {selectedTechnology.length!==0 &&(
+                                                    <div className="filter-group-count">
+                                                        ({selectedTechnology.length})
+                                                    </div>
+                                                   )}
+                                                </div>
+                                                
+                                            </div>
+                                            <div className="filter-gender-body-container">
+                                            {technologyList.map((item, index) => (
+                                                
+                                                <div className="filter-gender-body-first" onClick={() => updateTechnologyFilter(item)} key={index}>
+                                                    <div className={`pesudo-checkbox ${selectedTechnology.includes(item) ? "is-checked" : ""}`}>
+                                                        {selectedTechnology.includes(item) && <div className="icon-checkmark"></div>}
+                                                    </div>
+                                                    <span className="filter-gender-body-text">
+                                                        {item}
+                                                    </span>
+                                                </div>
+                                                  ))}
+                                                <div className="show-more-btn">
+                                                    <button className="show-more-btn-text"onClick={() => setIsOpen(!isOpen)}>
+                                                         {isOpen ? "- Less" : "+ More"}
+                                                    </button>
+                                                  <div className={`show-more-content ${isOpen ? 'open' : ''}`}>
+                                                        <div className="show-more-content-body">
+                                                  {moreTechnologyList.map((collection, index) => (
+                                                            <div
+                                                                className="filter-gender-body-first"
+                                                                onClick={() => updateTechnologyFilter(collection)}
+                                                                key={index}
+                                                            >
+                                                                <div className={`pesudo-checkbox ${selectedTechnology.includes(collection) ? "is-checked" : ""}`}>
+                                                                {selectedTechnology.includes(collection) && <div className="icon-checkmark"></div>}
+                                                                </div>
+                                                                <span className="filter-gender-body-text">
+                                                                {collection}
+                                                                </span>
+                                                            </div>
+                                                            ))}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          
+                                        </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div className="filter-group-container">
+                                        <div className="filter-price-container">
+                                            <div className="filter-gender-heading-conatiner">
+                                                <div className="filter-gender-text">
+                                                   Width&nbsp;
+                                                   {selectedWidth.length!==0 &&(
+                                                    <div className="filter-group-count">
+                                                        ({selectedWidth.length})
+                                                    </div>
+                                                   )}
+                                                </div>
+                                                
+                                            </div>
+                                            <div className="filter-gender-body-container">
+                                            {widthList.map((item, index) => (
+                                                <div className="filter-gender-body-first" onClick={() => updateWidthFilter(item)} key={index}>
+                                                    <div className={`pesudo-checkbox ${selectedWidth.includes(item) ? "is-checked" : ""}`}>
+                                                        {selectedWidth.includes(item) && <div className="icon-checkmark"></div>}
+                                                    </div>
+                                                    <span className="filter-gender-body-text">
+                                                        {item}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+
+                                        </div>
+                                    </div>
+                                
                                 </div>
+                                     
                             </div>
+                                            {
+                                                [
+                                                    selectedBrand,
+                                                    selectedColor,
+                                                    selectedCollections,
+                                                    selectedOffer,
+                                                    selectedGender,
+                                                    selectedPrice,
+                                                    selectedSize,
+                                                    selectedSports,
+                                                    selectedshoes,
+                                                    selectedShoesHeight,
+                                                    selectedSurface,
+                                                    selectedTechnology,
+                                                    selectedWidth
+                                                ].some(arr => arr.length > 0) && (
+                                                    <nav className='filter-apply-container' onClick={()=>setShowFilter(!showFilter)}>
+                                                    <button className='filter-apply-btn'>Apply</button>
+                                                    </nav>
+                                                )
+                                                }
+
+                                               
+
+
+
+
+                         
+                            
                         
                     </div>
                 </div>

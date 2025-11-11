@@ -10,6 +10,7 @@
     padding-top: 10px;
     overflow: hidden;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 .mini-banner-body{
     width: 100%;
@@ -63,7 +64,7 @@
 
 }
 .main-banner-swiper-wrapper{
-    width: 375px;
+    width: 100%;
     height: 100%;
 }
 .main-banner-img-conatainer{
@@ -424,7 +425,7 @@
      margin-bottom: 24px;
      padding: 2px 24px 0 24px;
      display: flex;
-     align-items: center;
+     align-items: flex-start;
      justify-content: space-between;
 }
 .tripl-black-text-container-inner{
@@ -586,13 +587,16 @@
     margin: 0;
     list-style: none;
     scrollbar-width: none;
+    scroll-padding: 0 24px;
+
     
     margin-top: 25px;
+    box-sizing: border-box;
 
 }
 .shop-bysport-silder-container li{
     flex: 0 0 calc( 75% - 20px);
-    margin: 0 18px 0 0;
+    margin: 0 15px 0 0;
     padding: 0;
 }
 .shop-bysport-silder-img-co{
@@ -699,4 +703,87 @@
 }
 .shop-by-icon-silder-container-inner{
     position: relative;
+}
+.triple-silder-arrow-container{
+    display: none;
+}
+
+
+@media screen and (min-width:425px) {
+    .shop-bysport-silder-container{
+        margin-top: 0;
+
+    }
+    .shop-bysport-silder-container li{
+        margin-right: 12px;
+    }
+    .shop-by-icon-text-container{
+        margin-bottom: 24px;
+    }
+    .banner-container{
+        padding-bottom: 44px;
+    }
+    .main-banner-container{
+        margin-top: 0;
+    }
+}
+@media screen and (min-width:500px) {
+.shop-bysport-container-body-top{
+    padding-left: 0;
+
+}
+.shop-bysport-container-body{
+    margin: 0;
+}
+}
+
+
+@media screen and (min-width:600px) {
+.nike-running-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.triple-silder-arrow-container{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.silder-shop-text{
+    display: flex;
+    align-items: center;
+    height: 28px;
+    border-radius: 4px;
+    margin:  0 -5px 0px 2px;
+    padding: 0 5px;
+    font-family: 'HelveticaNowTextMedium';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.silder-color-arrow-left,.silder-color-arrow-right{
+    display: flex;
+    margin-left: 12px;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    background-color: #f5f5f5;
+    border-radius: 24px;
+    transition: background-color 250ms cubic-bezier(.25, .1, .25, 1) ;
+    padding: 0;
+    border: none;
+
+
+}
+.triple-black-text-container{
+    margin-bottom: 12px;
+
+}
+.shop-bysport-container{
+    margin-top: 94px;
+}
+.shop-by-sport-text-container{
+    margin-bottom: 22px;
+}
 }

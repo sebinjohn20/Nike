@@ -64,7 +64,7 @@ import "../../Fonts/font.css";
     },
       {id :2,
       img:"https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_375,c_limit/11886c98-e7bd-47bd-afd7-ef2d0e9f1c36/nike-just-do-it.png",
-      title:"Foodball"
+      title:"Football"
     },
     
       {id :3,
@@ -217,6 +217,17 @@ function Banner() {
                 <div className="triple-black-text-container">
                   <div className="tripl-black-text-container-inner">
                     <h2>Colour of the Season: Triple Black Collection</h2>
+                  </div>
+                  <div className="triple-silder-arrow-container">
+                    <div className="silder-shop-text">
+                      Shop
+                    </div>
+                    <button className='silder-color-arrow-left'>
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
+                    </button>
+                     <button className='silder-color-arrow-right'>
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.474 18.966L15.44 12 8.474 5.033"></path></svg>
+                    </button>
                   </div>
                 </div>
                 <ul className="triple-silder-container">
