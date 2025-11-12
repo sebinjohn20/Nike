@@ -71,7 +71,9 @@
     outline: none;
 
 }
-.profile-btn,.menu-btn{
+.profile-btn,.menu-btn,.faviourte-btn
+{
+
     background: #fff;
     color:#111111;
     padding: 6px;
@@ -81,5 +83,200 @@
     cursor: pointer;
     border: none;
     outline: none;
+
+}
+.top-bar-container{
+    display: none;
+}
+.faviourte-btn{
+    display: none;
+
+}
+@media screen and (min-width:960px) {
+
+    .top-bar-container{
+        display: block;
+        background: #f5f5f5;
+        position: relative;
+        z-index: 3;
+    }
+    .top-bar-container-grid{
+        padding: 0 48px;
+        max-width: 1920;
+        margin: 0 auto;
+        display: grid;grid-template-columns: repeat(12,minmax(0,1fr));
+        align-items: center;
+    }
+    .top-bar-logo-container{
+        grid-column: span 6;
+    }
+    .top-bar-logo-container ul{
+        height: 36px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .top-bar-logo-container  ul li{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        
+    }
+    .top-bar-right-container{
+        grid-column: span 6;
+    }
+    .top-bar-right-container ul{
+        display: flex;
+        float: right;
+        padding-bottom: 0;
+        padding-right: 8px;
+        align-items: center;
+        margin: 0;
+        list-style: none;
+
+    }
+    .top-bar-right-container ul .link-item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+    }
+    .top-bar-right-container .find-a-store-text{
+        font-family: 'HelveticaNowTextMedium';
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #111111;
+        margin: 0;
+        padding: 0;
+    }
+    .top-bar-right-container .vertical-line{
+        border-right: 1px solid;
+        height: 12px;
+        margin: 12px;
+        padding: 0;
+    }
+    .header-container{
+        padding: 0 48px;
+        max-width: 1920px;
+    }
+    .menu-btn{
+        display: none;
+    }
+    .faviourte-btn{
+        display: flex;
+    }
+   .profile-btn.one{
+        display: none;
+    }
+   
+    .shopping-menu-grid nav{
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        
+    }
+   nav .desktop-category{
+    width: calc(100% - 330px);
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1255px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -1px;
+  
+    padding: 0;
+    list-style: none;
+    align-items: center;
+   }
+   nav .desktop-category li{
+    padding: 0;
+    margin: 0;
+    display: flex;
+ 
+   }
+   .desktop-category-item{
+    display: flex;
+    background-color: #ffffff;
+    padding-left: 12px;
+    padding-bottom: 0;
+    align-items: center;
+    min-height: 60px;
+    white-space: nowrap;
+    font-family: 'HelveticaNowTextMedium';
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+    font-weight: 500;
+    
+   }
+   .desktop-category details{
+    height: 24px;
+    width: 12px;
+   }
+   .desktop-category-item.standalone-link{
+    padding-right: 12px;
+   }
+   .logo-container{
+    grid-column: span 2;
+   }
+   .shopping-menu-grid{
+    grid-column: span 7;
+   }
+   .header-right-side-container{
+    grid-column: span 3;
+   }
+   .featured-text-container h1{
+     margin: 0 48px;
+   }
+   .triple-silder-container li{
+    flex: 0 0 calc((100% - 72px) / 3);
+
+   }
+   .triple-silder-container{
+    padding-left: 48px;
+   }
+   .triple-black-text-container{
+    padding: 2px 48px 0;
+   }
+   .triple-silder-bottom-container h4{
+    font-size: 16px;
+    line-height: 24px;
+   }
+   .triple-silder-bottom-container h5{
+    font-size: 16px;
+    line-height: 24px;
+   }
+   .triple-price-container h3{
+    font-size: 16px;
+    line-height: 24px;
+   }
+   .silder-color-arrow-left, .silder-color-arrow-right{
+    margin-top: 2px;
+   }
+   .shop-bysport-silder-container li{
+      flex: 0 0 calc((100% - 72px) / 3);
+   }
+   .shop-bysport-silder-container{
+    padding-left: 48px;
+   
+}
+    .shop-bysport-container{
+        margin-left: 48px;
+    }
+  
+
+
+
 
 }

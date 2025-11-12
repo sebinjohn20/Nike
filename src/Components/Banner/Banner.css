@@ -671,6 +671,7 @@
     box-sizing: border-box;
     min-height: 403px;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .shop-by-icon-silder-container .silder-count{
@@ -701,10 +702,19 @@
     max-width: 100%;
 
 }
+.shop-by-icon-slider {
+ position: relative;
+  width: 100%;
+  height: 100%;
+ 
+}
 .shop-by-icon-silder-container-inner{
     position: relative;
 }
 .triple-silder-arrow-container{
+    display: none;
+}
+.main-silder-arrow-container{
     display: none;
 }
 
@@ -725,6 +735,7 @@
     }
     .main-banner-container{
         margin-top: 0;
+        min-height: 300px;
     }
 }
 @media screen and (min-width:500px) {
@@ -760,6 +771,7 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    margin-top: -3px;
 }
 .silder-color-arrow-left,.silder-color-arrow-right{
     display: flex;
@@ -781,9 +793,126 @@
 
 }
 .shop-bysport-container{
-    margin-top: 94px;
+    margin-top: 84px;
 }
 .shop-by-sport-text-container{
-    margin-bottom: 22px;
+    margin-bottom: 13px;
+}
+.main-banner-img-conatainer{
+    aspect-ratio: 72/35;
+}
+.main-banner-text-container{
+    position: absolute;
+    word-break: break-word;
+    top:110px;
+    left: auto;
+    padding: 24px;
+    justify-content: flex-end;
+   height: 33.33333%;
+   z-index: 1000;
+   align-items: center;
+
+}
+.main-banner-text-container h3{
+    color: #ffffff;
+}
+.main-banner-text-container p{
+    color: #ffffff;
+    display: flex;
+
+}
+.shop-banner-btn span {
+    background: #ffffff;
+    color: #111111;
+}
+.swiper-pagination-container{
+    height: 36px;
+    position: absolute;
+    top: auto;
+    left: 47%;
+    bottom: 24px;
+    text-align: center;
+}
+.pause-stop-btn{
+    gap: 8px;
+    bottom: 28px;
+    right: 24px;
+    z-index: 10;
+}
+.swiper-pagination-bullet{
+    background-color: #ffffff;
+}
+.pause-btn-two{
+    stroke: #ffffff;
+  
+    color:#ffffff;
+    
+}
+.pause-btn-one{
+    stroke: #ffffff;
+}
+.stop-btn-container{
+    width: 20px;
+    height: 20px;
+}
+.stop-btn-container path{
+    fill: #ffffff;
+}
+.pause-stop-btn button{
+    width: 36px;
+    height: 36px;
+}
+.stop-btn-container rect {
+    fill: #ffffff;
+}
+.main-silder-arrow-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+}
+.main-silder-arrow-container .silder-left-arrow,.main-silder-arrow-container .silder-right-arrow{
+    height: 36px;
+    width: 36px;
+    background-color: #ffffff;
+    opacity: .7;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    color: #111111;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-banner-img-conatainer .main-banner-img {
+    min-height: 300px;
+}
+.featured-banner{
+    margin-top: 80px;
+}
+.shop-by-sport-text-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shop-silder-arrow-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+ 
+}
+.shop-by-icon-silder-container img{
+    width:300px;
+    height: 300px;
+    
+}
+.shop-by-icon-silder-container{
+    min-height: 300px;
 }
 }
