@@ -18,3 +18,7 @@
     font-family: 'Nike-Futura';
     src: url(Nike-Futura.woff2);
 }
+@font-face{
+    font-family: 'nike-glyphs';
+    src: url(nike-glyphs.woff);
+}

@@ -115,6 +115,7 @@ function Banner() {
     const [progress, setProgress] = useState(0);
     const silderRef=useRef(null)
     const sliderRefs = useRef(null);
+    const sportRefs=useRef(null)
   const [currentIndex, setCurrentIndex] = useState(1);
 
    const SLIDE_DURATION = 5000; 
@@ -165,6 +166,19 @@ const handleNextSlider=()=>{
 }
 const handlePrevSlider = () => {
     const slider = silderRef.current;
+    if (slider) {
+      slider.scrollBy({ left: -412, behavior: "smooth" }); 
+      
+    }
+  };
+  const handleSportNextSlider=()=>{
+  const silder=sportRefs.current
+  if(silder){
+    silder.scrollBy({left:412, behavior: "smooth" })
+  }
+}
+const handleSportPrevSlider = () => {
+    const slider = sportRefs.current;
     if (slider) {
       slider.scrollBy({ left: -412, behavior: "smooth" }); 
       
@@ -322,6 +336,78 @@ const handlePrevSlider = () => {
                 </div>
                   ))}
             </div>
+
+
+            <div className="desktop-feature-container">
+              <div className="desktop-feature-top-container">
+                <div className="top-container-first-item" onClick={() => navigate("/productlist")}>
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_664,c_limit/de9f23f0-3d1c-4324-9a81-73dd96e6bb4a/nike-just-do-it.png" alt="" />
+                <figcaption>
+                  <p className="desktop-top-container-text">
+                    Nike Killshot
+                  </p>
+                  <h3 className='desktop-top-container-des'>
+                    Courtside Attitude with a Modern Touch
+                  </h3>
+                  <div className="nike-shop-btn-container">
+                            <div className="nike-shop-btn-container-body">
+                                Shop
+                            </div>
+                        </div>
+                </figcaption>
+                </div>
+                 <div className="top-container-first-item" onClick={() => navigate("/productlist")}>
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_685,c_limit/00ebcdb9-3157-4ec4-916a-b39a9e628831/nike-just-do-it.png" alt="" />
+                <figcaption>
+                  <p className="desktop-top-container-text">
+                  Nike United
+                  </p>
+                  <h3 className='desktop-top-container-des'>
+                   Wicked Game
+                  </h3>
+                  <div className="nike-shop-btn-container">
+                            <div className="nike-shop-btn-container-body">
+                                Shop
+                            </div>
+                        </div>
+                </figcaption>
+                </div>
+              </div>
+              <div className="desktop-feature-top-container">
+                <div className="top-container-first-item" onClick={() => navigate("/productlist")}>
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_656,c_limit/5948807e-a3db-49c8-91a7-bb46b71862a4/nike-just-do-it.jpg" alt="" />
+                <figcaption>
+                  <p className="desktop-top-container-text">
+                   Nike 24.7
+                  </p>
+                  <h3 className='desktop-top-container-des'>
+               Made for all-day comfort
+                  </h3>
+                  <div className="nike-shop-btn-container">
+                            <div className="nike-shop-btn-container-body">
+                                Shop
+                            </div>
+                        </div>
+                </figcaption>
+                </div>
+                 <div className="top-container-first-item" onClick={() => navigate("/productlist")}>
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_719,c_limit/db1f9109-11d5-4fa5-9423-a90a9ec99468/nike-just-do-it.png" alt="" />
+                <figcaption>
+                  <p className="desktop-top-container-text">
+              Jordan
+                  </p>
+                  <h3 className='desktop-top-container-des'>
+                Coldest in the Game
+                  </h3>
+                  <div className="nike-shop-btn-container">
+                            <div className="nike-shop-btn-container-body">
+                                Shop
+                            </div>
+                        </div>
+                </figcaption>
+                </div>
+              </div>
+            </div>
           <div className="triple-black-collection-container">
             <section>
                 <div className="triple-black-text-container">
@@ -466,16 +552,16 @@ const handlePrevSlider = () => {
 
                       <div className="shop-silder-arrow-container">
                     
-                    <button className='silder-color-arrow-left' onClick={handlePrevSlider}>
+                    <button className='silder-color-arrow-left' onClick={handleSportPrevSlider}>
                       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
                     </button>
-                     <button className='silder-color-arrow-right'  onClick={handleNextSlider}>
+                     <button className='silder-color-arrow-right'  onClick={handleSportNextSlider}>
                       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.474 18.966L15.44 12 8.474 5.033"></path></svg>
                     </button>
                   </div>
 
                     </div>
-                    <ul className="shop-bysport-silder-container">
+                    <ul className="shop-bysport-silder-container" ref={sportRefs}>
                       {sportData.map((item,index)=>(
                         <li key={index} >
                             <div className='shop-bysport-silder-img-co'>
@@ -500,6 +586,12 @@ const handlePrevSlider = () => {
                 </div>
                     <div className="shop-by-icon-slider">
                 <div className="shop-by-icon-silder-container" ref={sliderRefs}>
+                  <div className="swiper-button-prev">
+
+                  </div>
+                     <div className="swiper-button-next">
+                    
+                  </div>
                   <span className="silder-count">
                     {currentIndex}/{images.length}
                   </span>

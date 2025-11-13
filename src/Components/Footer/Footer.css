@@ -4,7 +4,7 @@ footer{
     background: #ffffff;
     min-height: 575px;
     max-width: 1920px;
-   padding-bottom: 77px;
+   padding-bottom: 49px;
   
 
    
@@ -162,4 +162,118 @@ footer{
     display: flex;
     align-items: center;
 
+}
+.dekstop-footer{
+    display: none;
+}
+@media screen and (min-width:960px){
+    footer{
+        display: none;
+    }
+   .dekstop-footer{
+     display: block;
+        padding: 48px;
+   
+       
+        background:#ffffff;
+        max-width: 1920px;
+        margin: auto;
+        min-width: 300px;
+       
+        box-sizing: border-box;
+        padding-bottom: 77px;
+    }
+    .desktop-footer-top-border{
+        height: 1px;
+        background-color: #e5e5e5;
+        margin-bottom: 60px;
+
+    }
+    .desktop-footer-menu{
+        gap: 12px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .desktop-footer-menu-column{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        flex: 1 0 0;
+    }
+    .desktop-footer-menu-column h2{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 12px;
+        color: #111111;
+        font-family: 'HelveticaNowTextMedium';
+        font-size: 14px;
+        line-height:21px ;
+        height: 32px;
+        font-weight: 500;
+      
+
+    }
+    .desktop-footer-menu-column p{
+        margin: 0;
+        padding: 0;
+        color: #707072;
+        font-family: 'HelveticaNowTextMedium';
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+
+    }
+    .desktop-country-footer{
+        display: flex;
+        justify-content: flex-end;
+        height: 21px;
+    
+        gap: 4px;
+        flex: 1 0 0;
+        color: #707072;
+        font-family:'HelveticaNowTextMedium'; 
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+
+
+    }
+   
+    .globe-icon-span{
+        display: inline-flex;
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
+        margin-top: -1px;
+
+    }
+    .footer-desktop-space-bottom{
+        margin-bottom: 72px;
+    }
+    .footer-desktop-bottom-container{
+        padding-bottom: 48px;
+    }
+    .footer-desktop-bottom-container ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 12px;
+        flex-wrap: wrap;
+        border-top: 1px solid transparent;
+        position: static;
+
+
+
+    }
+        .footer-desktop-bottom-container li{
+            margin: 0;
+            padding: 0;
+
+        }
+    
+    
 }

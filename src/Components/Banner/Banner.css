@@ -672,6 +672,7 @@
     min-height: 403px;
     overflow-x: auto;
     scrollbar-width: none;
+    overflow-y: hidden;
 }
 
 .shop-by-icon-silder-container .silder-count{
@@ -716,6 +717,13 @@
 }
 .main-silder-arrow-container{
     display: none;
+}
+.desktop-feature-container{
+    display: none;
+}
+.swiper-button-prev{
+    display: none;
+
 }
 
 
@@ -794,6 +802,7 @@
 }
 .shop-bysport-container{
     margin-top: 84px;
+    margin-right: 48px;
 }
 .shop-by-sport-text-container{
     margin-bottom: 13px;
@@ -915,4 +924,199 @@
 .shop-by-icon-silder-container{
     min-height: 300px;
 }
+}
+@media screen and (min-width:825px) {
+.nike-running-container{
+    display: none;
+}
+.desktop-feature-container{
+  display: block;
+
+}
+.desktop-feature-top-container{
+    margin-left: -6px;
+    margin-right: -6px;
+}
+.top-container-first-item{
+    width: 50%;
+    display: inline-block;
+    position: relative;
+}
+.top-container-first-item img{
+    min-height: 300px;
+    object-position:  50% 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .5s ease .3s
+
+}
+.top-container-first-item figcaption{
+    position: absolute;
+    left: 24px;
+    width: calc(100% - 48px);
+    top: calc(66.66667% - 24px);
+    display: flex;
+    justify-content: flex-end;
+    height: 33.33333%;
+    flex-direction: column;
+    word-wrap: break-word;
+    box-sizing: border-box;
+
+
+}
+.desktop-top-container-text{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: 'HelveticaNowTextMedium';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+
+
+}
+.desktop-top-container-des{
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNowDisplayMedium';
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.desktop-feature-top-container:nth-child(2) {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: -4px;
+}
+
+.desktop-feature-container 
+  .desktop-feature-top-container:last-child 
+  .top-container-first-item:last-child 
+  .desktop-top-container-text {
+  color: black;
+}
+.desktop-feature-container 
+  .desktop-feature-top-container:last-child 
+  .top-container-first-item:last-child 
+  .desktop-top-container-des {
+  color: black;
+}
+.desktop-feature-container 
+  .desktop-feature-top-container:last-child 
+  .top-container-first-item:last-child 
+  .nike-shop-btn-container:last-child
+  .nike-shop-btn-container-body
+   {
+  color:#ffffff;
+  background: #111111;
+}
+}
+
+@media screen and (min-width:960px){
+  
+  .top-container-first-item figcaption{
+      left: 48px;
+      top: calc(66.66667% - 48px);
+  }
+  .shop-by-sport-text-container{
+    padding: 2px 48px 0;
+    padding-right: 48px;
+    margin-bottom: 12px;
+  }
+  .shop-silder-arrow-container{
+   
+  }
+  .shop-by-sport-silder-text-container{
+    margin-top: 36px;
+  }
+  .shop-bysport-container{
+    margin-top: 82px;
+  }
+  .shop-by-icon-text-container{
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  
+.swiper-button-prev {
+    height: 300px;
+    padding: 85px;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    width: 27px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-prev::after {
+    content: "\E608";
+    font-family: 'nike-glyphs';
+    position: absolute;
+    left: 84px;
+    top: 32%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.swiper-button-next{
+    height: 300px;
+    padding: 85px;
+    right: 0;
+    display: block;
+    position: absolute;
+    top: -85px;
+    z-index: 2;
+    align-items: center;
+    left: auto;
+    width: 27px;
+
+}
+.swiper-button-next::after{
+    right: 84px;
+      content: "\E609";
+    font-family: 'nike-glyphs';
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    top: calc( 50% - 20px);
+}
+    .shop-by-icon-silder-container img {
+        margin-right: 16px;
+        
+    }
+   
+    .shop-by-icon-silder-container img:first-of-type {
+    margin-left: 14px;
+}
+.shop-by-icon-silder-container .silder-count{
+  top: 48px;
+  right: 48px   
+}
+.banner-container{
+    padding-bottom: 80px;
+}
+
+
+
+
 }

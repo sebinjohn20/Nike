@@ -92,6 +92,10 @@
     display: none;
 
 }
+.desktop-category{
+    display: none;
+
+}
 @media screen and (min-width:960px) {
 
     .top-bar-container{
