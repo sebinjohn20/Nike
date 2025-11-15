@@ -183,7 +183,7 @@ footer{
         min-width: 300px;
        
         box-sizing: border-box;
-        padding-bottom: 77px;
+        padding-bottom: 49px;
     }
     .desktop-footer-top-border{
         height: 1px;
@@ -251,7 +251,7 @@ footer{
 
     }
     .footer-desktop-space-bottom{
-        margin-bottom: 72px;
+        margin-bottom: 73px;
     }
     .footer-desktop-bottom-container{
         padding-bottom: 48px;
@@ -278,4 +278,11 @@ footer{
         }
     
     
+}
+@media screen and (min-width: 1440px) {
+    .footer-desktop-space-bottom{
+        margin-bottom: 72px;
+    }
+    
+
 }

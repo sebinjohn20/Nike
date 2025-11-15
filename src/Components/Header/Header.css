@@ -96,6 +96,13 @@
     display: none;
 
 }
+ .header-right-side-body .search-bar{
+    display: none;
+ }
+ .search-item-desktop-container{
+    display: none;
+
+ }
 @media screen and (min-width:960px) {
 
     .top-bar-container{
@@ -106,7 +113,7 @@
     }
     .top-bar-container-grid{
         padding: 0 48px;
-        max-width: 1920;
+        max-width: 1920px;
         margin: 0 auto;
         display: grid;grid-template-columns: repeat(12,minmax(0,1fr));
         align-items: center;
@@ -278,9 +285,82 @@
     .shop-bysport-container{
         margin-left: 48px;
     }
+     .header-right-side-body .search-bar{
+        display: block;
+    }
   
 
 
 
 
+}
+@media  screen and (min-width:1201px) {
+    .search-item-desktop-container{
+        display: grid;
+        grid-template-columns:  0 180px 0;
+        justify-content: end;
+        align-items: center;
+        transition: grid-template-columns 400ms cubic-bezier(0.6, 0, 0.1, 1)
+}
+    .search-item-desktop-container  .bar-input-container{
+        grid-column: 2;
+        display: flex;
+        column-gap: 12px;
+    }
+    .bar-input-flex-container{
+        width: 168px;
+        transition: width 400ms cubic-bezier(0.6, 0, 0.1, 1) ;
+        background-color: #f5f5f5;
+        display: flex;
+        border-radius: 24px;
+        box-sizing: border-box;
+        margin-left: 4px;
+    }
+    .bar-input-flex-container button{
+        color: #111111;
+        background-color: #f5f5f5;
+        border-color: transparent;
+        padding: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+
+
+    }
+    .bar-input-flex-container input{
+        padding: 7px 0px 9px 2px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        height: 36px;
+        border-radius: 24px;
+        font-family: 'HelveticaNowTextMedium';
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #111111;
+        background-color: #f5f5f5;
+    }
+    .search-end-icon-container{
+        visibility: hidden;
+        width: 8px;
+    }
+    .search-end-icon-container button{
+        color: #111111;
+        background-color: #f5f5f5;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+
+    }
+    .header-right-side-body .search-bar{
+        display: none
+    }
 }

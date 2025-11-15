@@ -18,7 +18,7 @@ export const FilterProvider = ({children}) => {
   const[selectedBrand,setSelectedBrand]=useState([])
   const[selectedWidth,setSelectedWidth]=useState([])
   const[selectedTechnology,setSelectedTechnology]=useState([])
-  const[selectedSort, setSelectedSort]=useState("Featured")
+  const[selectedSort, setSelectedSort]=useState(false)
 
 
 
@@ -119,6 +119,7 @@ export const FilterProvider = ({children}) => {
   }
   const updateSort=(sortOption)=>{
       setSelectedSort(sortOption);
+        
     };
   const genderlist = ["Men", "Women", "Unisex"];
   const priceList=["Under ₹ 2 500.00","₹ 2 501.00 - ₹ 7 500.00","₹ 7 501.00 - ₹ 12 999.00","Over ₹ 13 000.00"]

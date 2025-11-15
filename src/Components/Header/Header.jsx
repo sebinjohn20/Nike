@@ -106,6 +106,21 @@ function Header() {
         </div>
         <div className="header-right-side-container">
             <div className="header-right-side-body">
+              <div className="search-item-desktop-container">
+                <div className="bar-input-container">
+                  <div className="bar-input-flex-container">
+                    <button>
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"></path></svg>
+                    </button>
+                     <input type="search" placeholder='Search' />
+                     <div className="search-end-icon-container">
+                      <button>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M18.973 5.027L5.028 18.972m0-13.945l13.944 13.945"></path></svg>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
                 <form >
                     <div className="search-bar">
                         <div className="search-bar-input">

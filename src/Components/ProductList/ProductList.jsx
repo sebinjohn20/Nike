@@ -49,6 +49,7 @@ function ProductList() {
     updateBrandFilter,
     brandList,
     selectedBrand,
+     updateSort
 
   }=useFilter()
 
@@ -281,7 +282,8 @@ const isPriceInRange=(price,range)=>{
                   </button>
                   <div className="desk-sort-container">
                     <button className='sort-btn-container' onClick={()=>setOpenSort(!opensort)}>
-                      <span className='sort-btn-text'>Sort By</span>
+                      <span className='sort-btn-text'>{selectedSort?.length ? `Sort By: ` : `Sort By`}</span>
+                      <span className='dropdown-btn-selected-text'> {selectedSort}</span>
                       <div className={`icon-dropdown-sort ${opensort? 'rotated' : ''}`}>
 
                       </div>
@@ -289,7 +291,15 @@ const isPriceInRange=(price,range)=>{
                     <div className="sort-drop-down-container">
                       <div className={`sort-drop-down-container-body ${opensort? 'open' :''}`}>
                         {sort.map((item,index)=>(
-                        <button key={index}>{item}</button>
+                      <button
+                        key={index}
+                        className={selectedSort === item ? "active-sort" : ""}
+                      onClick={() => {
+                                 updateSort(item);
+                                setOpenSort(false); 
+                              }}
+                                                  
+                      >{item}</button>
                         ))}
                       </div>
                     </div>
