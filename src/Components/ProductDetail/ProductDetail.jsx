@@ -44,12 +44,37 @@ const smallImg=[
 
   "https://static.nike.com/a/images/t_default/05f0d926-785d-417e-84a7-090af46e264f/AIR+FORCE+1+%2707+LV8.png"
 ]
+const newImg=[
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/ab49cd62-e261-4dee-8511-242148604889/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/0ae0c6ab-c785-4a7c-9146-4ef188408433/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/8117e3c9-1b2a-4719-92d4-863dfab2cc35/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/3cc551b7-5b46-4081-9e11-318d31a6c439/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/e0a06185-1311-414b-84ad-4339070a5e72/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/a6bd4b85-8582-48a2-ae44-21e6025f5f0d/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/39692d18-74bf-4585-bc5d-551adf4bb8a9/AIR+FORCE+1+%2707+LV8.png",
+  "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/2fdc0970-49d3-4567-8ee9-68dd7c8151d3/AIR+FORCE+1+%2707+LV8.png",
+
+
+]
 
 function ProductDetail() {
   const [currentSlide, setCurrentSlide] = useState(0);
-//   const goToSlide = (index) => {
-//   setCurrentSlide(index);
-// };
+ const [selectedImg,setSelectedImg]=useState(newImg[0])
+ const [activeImg,setActiveImg]=useState(0)
+const handleActiveImg = (index) => {
+  setSelectedImg(newImg[index])  
+  setActiveImg(index)
+}
+const handleNext=()=>{
+  const nextIndex=(activeImg +1) % newImg.length
+  setActiveImg(nextIndex)
+  setSelectedImg(newImg[nextIndex])
+}
+const handlePrev=()=>{
+  const prevIndex=(activeImg-1 +newImg.length)%newImg.length
+  setActiveImg(prevIndex)
+  setSelectedImg(newImg[prevIndex])
+}
   return (
  <>
   <main>
@@ -252,8 +277,10 @@ function ProductDetail() {
                   <div className="desktop-image-carousel-container">
                     <div className="desktop-image-carousel-small-list">
                       {smallImg.map((img,index)=>(
-                      <div className="desktop-image-carousel-small-list-item-one" key={index}>
-                          <div className="carousel-small-list-img-container">
+                      <div className={`desktop-image-carousel-small-list-item-one  ${activeImg===index? 'active-img':'' }`} key={index}
+                        onClick={()=>handleActiveImg(index)}
+                      >
+                          <div className={`carousel-small-list-img-container ${activeImg===index? 'active-img':'' }`}>
                             <img src={img} alt="" />
                           </div>
                       </div>
@@ -266,14 +293,14 @@ function ProductDetail() {
               
                       </div>
                       <div className="img-large-wrapper">
-                        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/ab49cd62-e261-4dee-8511-242148604889/AIR+FORCE+1+%2707+LV8.png" alt="" />
+                        <img src={selectedImg} alt="" />
                       </div>
                     </div>
-                     <div className="large-product-img-arrow-flex">
-                      <button className='large-img-prevBtn'>
+                     <div className="large-product-img-arrow-flex" > 
+                      <button className='large-img-prevBtn'onClick={handlePrev}>
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
                       </button>
-                      <button className='large-img-nextBtn'>
+                      <button className='large-img-nextBtn' onClick={handleNext}>
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.474 18.966L15.44 12 8.474 5.033"></path></svg>
                       </button>
                      </div>

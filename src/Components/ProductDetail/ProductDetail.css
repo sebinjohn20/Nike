@@ -18,6 +18,7 @@
     max-width: 100%;
     margin: 0 auto;
     height: 100%;
+    margin-top: -1px;
 }
 .product-detalis-banner-body .nds-text{
     margin-left: 12px;
@@ -47,6 +48,7 @@
     font-size: 12px;
     line-height: 18px;
      white-space: break-spaces;
+     margin-left: 4px;
      
 
 }
@@ -643,6 +645,14 @@ main{
     width: 100%;
     max-width: 100%;
    }
+      .desktop-image-carousel-small-list-item-one.active-img{
+        background: rgba(17, 17, 17, 0.15);
+     
+      }
+      .carousel-small-list-img-container.active-img img{
+            background: rgba(17, 17, 17, 0.15);
+            opacity: .9;
+      }
    .desktop-product-large-img-container{
         
     border-radius: 8px;
@@ -729,7 +739,7 @@ main{
         grid-row: 1 / undefined;
         padding-top: 48px;
         padding-left: 24px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
 
 
     }
@@ -782,7 +792,7 @@ main{
      }
      .image-mobile-size-container{
         margin-bottom: 32px;
-        margin-top: 20px;
+        margin-top: 36px;
      }
      .size-list-grid-container-wrapper{
         gap: 7px;
@@ -792,6 +802,13 @@ main{
 
      }
      .additional-price-message {
-        margin-top: 9px;
+        margin-top: 6px;
      }
 }
+/* @media screen and (min-width: 1108px) {
+    .desktop-product-large-img-container{
+        width: 535px;
+        max-width: 535px;
+        height: 669px;
+    }
+} */
